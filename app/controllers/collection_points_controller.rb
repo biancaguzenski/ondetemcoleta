@@ -21,6 +21,9 @@ class CollectionPointsController < ApplicationController
   def edit
   end
 
+  def home
+  end
+
   # POST /collection_points
   # POST /collection_points.json
   def create
