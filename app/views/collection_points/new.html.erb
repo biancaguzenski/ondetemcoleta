@@ -1,5 +1,12 @@
-<h1>New Collection Point</h1>
+<div class="container title"><h2>Inserir novo local</h2>
+<h4 class="subtitles pb-4 pt-3"> * requerido </h4>
+</div>
+<% if flash[:notice] %>
+<div class="alert alert-danger" role="alert">
+    <%= flash[:notice] %>
+</div>
+<% end %>
 
-<%= render 'form', collection_point: @collection_point %>
 
-<%= link_to 'Back', collection_points_path %>
+<%= render 'form', collection_points: @collection_points %>
+<div class="container">

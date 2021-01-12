@@ -1,47 +1,35 @@
-<%= form_with(model: collection_point, local: true) do |form| %>
-  <% if collection_point.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(collection_point.errors.count, "error") %> prohibited this collection_point from being saved:</h2>
-
-      <ul>
-        <% collection_point.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+<%= form_with(model: collection_points, local: true, class:"form-group") do |form| %>
+  
+  <div class="form-group col-md-6">
+    <%= form.label :nome, '* Nome', class:"col-md control-label" %>
+    <%= form.text_field :name, placeholder: "Ex: Supermercado Big", class:"form-control" %>
+  </div>
+  <div class="form-group col-md-6">
+    <%= form.label :estado, '* Estado', class:"col control-label" %>
+    <%= form.text_field :state, placeholder: "Apenas sigla. Ex: SC", class:"form-control" %>
+  </div>
+  <div class="form-group col-md-6">
+    <%= form.label :cidade, '* Cidade', class:"col control-label" %>
+    <%= form.text_field :city, placeholder: "Ex: Florianópolis", class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state %>
+  <div class="form-group col-md-6">
+    <%= form.label :endereço, '* Endereço', class:"col control-label" %>
+    <%= form.text_field :address, placeholder: "Ex: Rua dos limões, 1200/44", class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city %>
+  <div class="form-group col-md-6">
+    <%= form.label :telefone, class:"col control-label" %>
+    <%= form.text_field :phone, placeholder: "(xx)12345-6789", class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
+  <div class="form-group col-md-6">
+    <%= form.label :observação, class:"col control-label" %>
+    <%= form.text_field :obs, placeholder: "Ex: Ponto de coleta em frente ao estacionamento", class:"form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.number_field :phone %>
-  </div>
-
-  <div class="field">
-    <%= form.label :obs %>
-    <%= form.text_field :obs %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+      
+  <div class="actions ml-4">
+    <%= form.submit "Criar", class:"btn btn-default" %>
+    <%= link_to 'Voltar', root_path, class:"btn btn-default" %>
   </div>
 <% end %>
