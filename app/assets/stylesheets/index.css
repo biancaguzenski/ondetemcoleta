@@ -1,0 +1,13 @@
+.table-show {
+    display: table; /* check so these really applies */
+    width: 100%;
+    font-size: 16px;
+}
+.table-head {
+    font-family: 'Oswald', sans-serif;
+}
+
+.table-content {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}

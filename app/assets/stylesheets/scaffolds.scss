@@ -16,12 +16,11 @@ pre {
 a {
   color: #000; }
 
-a:visited {
-  color: #666; }
-
 a:hover {
-  color: #fff;
-  background-color: #000; }
+  color: rgb(55, 175, 0);
+  font-weight: 900;
+  text-decoration: none;
+  }
 
 th {
   padding-bottom: 5px; }
@@ -39,7 +38,7 @@ div.actions {
 .field_with_errors {
   padding: 2px;
   background-color: red;
-  display: table; }
+  border-radius: 5px;}
 
 #error_explanation {
   width: 450px;

@@ -1,6 +1,14 @@
-<h1>Editing Collection Point</h1>
+<div class="container">
+    <h2>Editar: <%= @collection_point.name %></h2>
+    <h4 class="subtitles pb-4 pt-3"> * requerido </h4>
+</div>
 
-<%= render 'form', collection_point: @collection_point %>
+<% if flash[:notice] %>
+    <div class="alert alert-danger" role="alert">
+        <%= flash[:notice] %>
+    </div>
+<% end %>
 
-<%= link_to 'Show', @collection_point %> |
-<%= link_to 'Back', collection_points_path %>
+
+<%= render 'form', collection_points: @collection_point %>
+

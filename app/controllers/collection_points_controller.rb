@@ -4,7 +4,12 @@ class CollectionPointsController < ApplicationController
   # GET /collection_points
   # GET /collection_points.json
   def index
-    @collection_points = CollectionPoint.all
+    if params[:search]
+      @collection_points = CollectionPoint.where("name like ? OR city like ? OR state like ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
+    else
+      @collection_points = CollectionPoint.all
+      @collection_points = CollectionPoint.order(name: :desc)
+    end
   end
 
   # GET /collection_points/1
@@ -31,11 +36,13 @@ class CollectionPointsController < ApplicationController
 
     respond_to do |format|
       if @collection_point.save
-        format.html { redirect_to @collection_point, notice: 'Collection point was successfully created.' }
+        flash[:notice] = "Local salvo com sucesso!"
+        format.html { redirect_to @collection_point }
         format.json { render :show, status: :created, location: @collection_point }
       else
+        flash[:notice] = "Insira local de coleta no formato adequado"
         format.html { render :new }
-        format.json { render json: @collection_point.errors, status: :unprocessable_entity }
+        format.json { render json: @collection_point.errors }
       end
     end
   end
@@ -45,11 +52,12 @@ class CollectionPointsController < ApplicationController
   def update
     respond_to do |format|
       if @collection_point.update(collection_point_params)
-        format.html { redirect_to @collection_point, notice: 'Collection point was successfully updated.' }
+        flash[:notice] = "Local modificado com sucesso!"
+        format.html { redirect_to @collection_point }
         format.json { render :show, status: :ok, location: @collection_point }
       else
         format.html { render :edit }
-        format.json { render json: @collection_point.errors, status: :unprocessable_entity }
+        format.json { render json: @collection_point.errors }
       end
     end
   end
