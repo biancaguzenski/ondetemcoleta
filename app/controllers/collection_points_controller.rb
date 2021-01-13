@@ -5,15 +5,14 @@ class CollectionPointsController < ApplicationController
   # GET /collection_points.json
   def index
     if params[:search]
-      @collection_points = CollectionPoint.where("name like ? OR city like ? OR state like ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
+      normalized_search = params[:search].parameterize(separator: ' ').upcase
+      @collection_points = CollectionPoint.where("name like ? OR city like ? OR state like ?", "%#{normalized_search}%", "%#{normalized_search}%", "%#{normalized_search}%")
     else
       @collection_points = CollectionPoint.all
       @collection_points = CollectionPoint.order(name: :desc)
     end
   end
 
-  # GET /collection_points/1
-  # GET /collection_points/1.json
   def show
   end
 
