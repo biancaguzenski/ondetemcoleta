@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_01_12_134540) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "collection_points", force: :cascade do |t|
     t.string "name"
     t.string "state"
