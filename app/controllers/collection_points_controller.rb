@@ -5,7 +5,7 @@ class CollectionPointsController < ApplicationController
   # GET /collection_points.json
   def index
     if params[:search]
-      normalized_search = params[:search].parameterize(separator: ' ').upcase
+      normalized_search = Normalizer.new.normalize(params[:search])
       @collection_points = CollectionPoint.where("name like ? OR city like ? OR state like ?", "%#{normalized_search}%", "%#{normalized_search}%", "%#{normalized_search}%")
     else
       @collection_points = CollectionPoint.all

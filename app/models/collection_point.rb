@@ -10,16 +10,12 @@ class CollectionPoint < ApplicationRecord
     before_save :upcase_fields
 
     def upcase_fields
-       self.name = self.name.parameterize(separator: ' ')
-       self.name.upcase!
+       self.name = Normalizer.new.normalize(self.name)
 
-       self.state = self.state.parameterize(separator: ' ')
-       self.state.upcase!
+       self.state = Normalizer.new.normalize(self.state)
 
-       self.city = self.city.parameterize(separator: ' ')
-       self.city.upcase!
+       self.city = Normalizer.new.normalize(self.city)
 
-       self.address = self.address.parameterize(separator: ' ')
-       self.address.upcase!
+       self.address = Normalizer.new.normalize(self.address)
     end
 end
