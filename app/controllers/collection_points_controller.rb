@@ -23,6 +23,16 @@ class CollectionPointsController < ApplicationController
 
   # GET /collection_points/1/edit
   def edit
+    respond_to do |format|
+      if @collection_point.update(collection_point_params)
+        flash[:notice] = "Local modificado com sucesso!"
+        format.html { redirect_to @collection_point }
+        format.json { render :show, status: :ok, location: @collection_point }
+      else
+        format.html { render :edit }
+        format.json { render json: @collection_point.errors }
+      end
+    end
   end
 
   def home
