@@ -66,7 +66,7 @@ class CollectionPointsController < ApplicationController
   def destroy
     @collection_point.destroy
     respond_to do |format|
-      format.html { redirect_to collection_points_url, notice: 'Collection point was successfully destroyed.' }
+      format.html { redirect_to @collection_point, notice: 'Local de coleta apagado com sucesso.' }
       format.json { head :no_content }
     end
   end
