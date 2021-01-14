@@ -36,7 +36,7 @@ class CollectionPointsController < ApplicationController
 
     respond_to do |format|
       if @collection_point.save
-        flash[:notice] = "Local salvo com sucesso!"
+        flash[:notice] = "Local criado com sucesso!"
         format.html { redirect_to @collection_point }
         format.json { render :show, status: :created, location: @collection_point }
       else
@@ -52,9 +52,8 @@ class CollectionPointsController < ApplicationController
   def update
     respond_to do |format|
       if @collection_point.update(collection_point_params)
-        flash[:notice] = "Local modificado com sucesso!"
+        flash[:notice] = "Editado com sucesso!"
         format.html { redirect_to @collection_point }
-        format.json { render :show, status: :ok, location: @collection_point }
       else
         format.html { render :edit }
         format.json { render json: @collection_point.errors }

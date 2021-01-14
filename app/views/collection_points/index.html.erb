@@ -19,8 +19,8 @@
       <td class="table-content"><%= collection_point.address %></td>
       <td class="table-content"><%= collection_point.phone %></td>
       <td class="table-content"><%= collection_point.obs %></td>
-      <td class="table-content"><%= link_to 'Editar', edit_collection_point_path(collection_point), class:"btn btn-secondary" %></td>
-      <td class="table-content"><%= button_to 'Reportar local inexistente', collection_point, class:"btn btn-danger", method: :delete, data: { confirm: "Tem certeza que quer reportar #{collection_point.name}?" } %></td>
+      <td class="table-content"><%= link_to 'Local não existe', collection_points_path, class:"btn btn-danger", data: { confirm: "Tem certeza que quer reportar #{collection_point.name}?" } %></td>
+      <td class="table-content"><%= button_to 'A', collection_point, class:"btn btn-danger", method: :delete, data: { confirm: "Tem certeza que quer reportar #{collection_point.name}?" } %></td>
       </tr>
     <% end %>
   </tbody>
