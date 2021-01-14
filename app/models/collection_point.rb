@@ -1,9 +1,8 @@
 class CollectionPoint < ApplicationRecord
 
     validates :name, :state, :city, :address, presence: true
-    #validates :name, :state, :city, :address, format: { with: /\A[a-zA-Z]+\z/,
-    #message: "Insira no formato válido" }
-    validates :state, length: { maximum: 2, message: "Insira no formato válido" }
+    validates :name, format: { with: /\A[[a-zA-Z-\s]+[:word:]]+\z/, message: "Insira nome sem carctetes especiais" }
+    validates :state, length: { maximum: 2, message: "Insira estado no formato sigla" }
     #validates :phone, numericality: { only_integer: true }
     #validates :phone, length: { in: 8..11 }
     

@@ -1,35 +1,33 @@
 <%= form_with(model: collection_points, local: true, class:"form-group") do |form| %>
-  
-  <div class="form-group col-md-6">
-    <%= form.label :nome, '* Nome', class:"col-md control-label" %>
-    <%= form.text_field :name, placeholder: "Ex: Supermercado Big", class:"form-control" %>
-  </div>
-  <div class="form-group col-md-6">
-    <%= form.label :estado, '* Estado', class:"col control-label" %>
-    <%= form.text_field :state, placeholder: "Apenas sigla. Ex: SC", class:"form-control" %>
-  </div>
-  <div class="form-group col-md-6">
-    <%= form.label :cidade, '* Cidade', class:"col control-label" %>
-    <%= form.text_field :city, placeholder: "Ex: Florianópolis", class:"form-control" %>
-  </div>
-
-  <div class="form-group col-md-6">
-    <%= form.label :endereço, '* Endereço', class:"col control-label" %>
-    <%= form.text_field :address, placeholder: "Ex: Rua dos limões, 1200/44", class:"form-control" %>
-  </div>
-
-  <div class="form-group col-md-6">
-    <%= form.label :telefone, class:"col control-label" %>
-    <%= form.text_field :phone, placeholder: "(xx)12345-6789", class:"form-control" %>
-  </div>
-
-  <div class="form-group col-md-6">
-    <%= form.label :observação, class:"col control-label" %>
-    <%= form.text_field :obs, placeholder: "Ex: Ponto de coleta em frente ao estacionamento", class:"form-control" %>
-  </div>
-      
-  <div class="actions ml-4">
-    <%= form.submit "Criar", class:"btn btn-default" %>
-    <%= link_to 'Voltar', root_path, class:"btn btn-default" %>
+  <div class="row">
+    <div class="form-group col-md-6">
+      <%= form.label :nome, '* Nome', class:"col-md control-label" %>
+      <%= form.text_field :name, placeholder: "Ex: Supermercado Big", class:"form-control", required: true %>
+    </div>
+    <div class="form-group col-md-6">
+      <%= form.label :estado, '* Estado', class:"col control-label" %>
+      <%= form.select :state, ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'], class:"form-control", required: true %>
+    </div>
+    <div class="form-group col-md-6">
+      <%= form.label :cidade, '* Cidade', class:"col control-label" %>
+      <%= form.text_field :city, placeholder: "Ex: Florianópolis", class:"form-control", required: true %>
+    </div>
+    <div class="form-group col-md-6">
+      <%= form.label :endereço, '* Endereço', class:"col control-label" %>
+      <%= form.text_field :address, placeholder: "Ex: Rua dos limões, 1200/44", class:"form-control", required: true %>
+    </div>
+    <div class="form-group col-md-6">
+      <%= form.label :telefone, class:"col control-label" %>
+      <%= form.text_field :phone, placeholder: "(xx)12345-6789", class:"form-control" %>
+    </div>
+    <div class="form-group col-md-6">
+      <%= form.label :observação, class:"col control-label" %>
+      <%= form.text_field :obs, placeholder: "Ex: Ponto de coleta em frente ao estacionamento", class:"form-control" %>
+    </div>
+    
+    <div class="actions ml-4">
+      <%= form.submit "Criar", class:"btn btn-secondary" %>
+      <%= link_to 'Voltar', root_path, class:"btn btn-secondary" %>
+    </div>
   </div>
 <% end %>
