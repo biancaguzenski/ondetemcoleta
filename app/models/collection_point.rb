@@ -17,5 +17,7 @@ class CollectionPoint < ApplicationRecord
        self.city = Normalizer.new.normalize(self.city)
 
        self.address = Normalizer.new.normalize(self.address)
+
+       self.phone = Normalizer.new.normalize(self.phone)
     end
 end
