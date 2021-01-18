@@ -1,6 +1,6 @@
 class Normalizer
     def normalize(string)
-        string.to_s.parameterize(separator: " ").tr('^A-Za-z, '').upcase
+        string.to_s.parameterize(separator: " ").tr('^A-Za-z', '').upcase
     end
 
     def normalize_phone(phone)
