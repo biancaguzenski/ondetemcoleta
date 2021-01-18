@@ -4,8 +4,6 @@ class Normalizer
     end
 
     def normalize_phone(phone)
-        if phone.include? "(" || ")"
-            phone.delete "(" ")"
-        end
+        phone.tr('^0-9', '')  
     end
 end
