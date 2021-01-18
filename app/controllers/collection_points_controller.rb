@@ -37,7 +37,7 @@ class CollectionPointsController < ApplicationController
     respond_to do |format|
       if @collection_point.save
         flash[:notice] = "Local criado com sucesso!"
-        format.html { redirect_to @collection_point }
+        format.html { redirect_to collection_points_path }
         format.json { render :show, status: :created, location: @collection_point }
       else
         flash[:notice] = "Insira local de coleta no formato adequado"
