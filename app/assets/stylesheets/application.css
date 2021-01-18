@@ -41,7 +41,4 @@
 .navbar-brand {
     margin-left: 32%;
 }
-
-*= require select2
-*= require select2-bootstrap
 @import "bootstrap/scss/bootstrap";
