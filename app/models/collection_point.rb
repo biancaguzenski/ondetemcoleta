@@ -14,6 +14,6 @@ class CollectionPoint < ApplicationRecord
 
        self.address = Normalizer.new.normalize(self.address)
 
-       self.phone = Normalizer.new.normalize_phone(self.phone)
+       #self.phone = Normalizer.new.normalize_phone(self.phone)
     end
 end
