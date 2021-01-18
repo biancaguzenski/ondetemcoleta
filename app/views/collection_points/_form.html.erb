@@ -5,10 +5,9 @@
       <%= form.text_field :name, placeholder: "Ex: Supermercado Big", class:"form-control", required: true %>
     </div>
     
-  
     <div class="form-group col-md-6">
       <%= form.label :estado, '* Estado', class:"col control-label" %>
-      <%= form.select :state, ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'], class:"form-control", required: true %>
+      <%= form.select :state, ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'], class:"form-control", id: "js-searchable", required: true %>
     </div>
     <div class="form-group col-md-6">
       <%= form.label :cidade, '* Cidade', class:"col control-label" %>
@@ -33,3 +32,13 @@
     </div>
   </div>
 <% end %>
+
+<% content_for :js do %>
+  <script>
+    $(document).ready(function() { 
+        $('.js-searchable').select2({ 
+            theme: "bootstrap" 
+        }); 
+    });
+  </script>
+  <% end %>

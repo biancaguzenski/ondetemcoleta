@@ -15,32 +15,30 @@
   </head>
 
   <body>
-    <div class="container mt-4">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
-        <div class="container-fluid">
-          <a class="navbar-brand p-2 title" href="/">ONDE TEM COLETA?</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active home-text pl-5" aria-current="page" href="#">Sobre o projeto</a>
-              </li>
-              <li class="nav-item active home-text pl-5">
-                <a class="nav-link" href="#">Contato</a>
-              </li>
-            </ul>
-          </div>
+    <div class="container mt-3">
+      <nav class="navbar navbar-expand-lg navbar-light nav-footer-bg p-0">
+        <div class="container">
+              <a class="navbar-brand p-0" href="/">
+                <div class="logo-image">
+                  <%= image_tag ("3.png") %>
+                </div>
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
       </nav>
+      <div class="text-navbar mb-3">
+        <div class="text-center pb-1 nav-footer-bg">
+          <a class="text-navbar mr-3" href="/">sobre o projeto</a>|
+          <a class="text-navbar ml-3" href="/">fale conosco</a>
+        </div>
+      </div>
       <%= yield %>
-
-      
     </div>
     <footer class="pt-4 pb-4">
       <div class="container home-text">
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        <div class="text-center p-3 nav-footer-bg">
           © 2020 Copyright
           <a class="text-dark" href="">ondetemcoleta</a>
         </div>

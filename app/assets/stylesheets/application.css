@@ -13,6 +13,12 @@
     font-size: 20px;
 }
 
+.text-navbar {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: rgb(3, 16, 59);
+}
+
 .subtitles {
     font-family: 'Lato', cursive;
     font-size: 16px;
@@ -22,4 +28,20 @@
     border-radius: 15px;
   }
 
+.logo-image img{
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.nav-footer-bg {
+    background-color: #efefef;
+}
+
+.navbar-brand {
+    margin-left: 32%;
+}
+
+*= require select2
+*= require select2-bootstrap
 @import "bootstrap/scss/bootstrap";
