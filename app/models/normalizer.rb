@@ -3,9 +3,9 @@ class Normalizer
         string.to_s.parameterize(separator: " ").upcase
     end
 
-    def normalize_int(integer)
-        if integer.include? "(" || ")"
-            integer.delete "(" ")"
+    def normalize_phone(phone)
+        if phone.include? "(" || ")"
+            phone.delete "(" ")"
         end
     end
 end
