@@ -9,4 +9,8 @@ class NormalizerTest < ActiveSupport::TestCase
     string = Normalizer.new
     assert_equal string.normalize("cão"), "CAO"
   end
+  test "remove non-integer values from phone"
+    string = Normalizer.new
+    assert_equal string.normalize_phone("(51)99294-7666"), "51992947666"
+  end
 end
