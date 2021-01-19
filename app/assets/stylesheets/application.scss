@@ -42,6 +42,25 @@
     margin-left: 32%;
 }
 
+.icon-edit {
+    font-size: 20px;
+    color: green;
+    margin-top: 50%;
+}
+.icon-edit:hover {
+    background-color: yellow;
+}
+
+.icon-report {
+    font-size: 20px;
+    color: tomato;
+    margin-top: 50%;
+}
+.icon-report:hover {
+    background-color: yellow;
+}
+
+
 @import "bootstrap/scss/bootstrap";
 @import 'font_awesome5_webfont';
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
