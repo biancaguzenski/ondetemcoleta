@@ -5,7 +5,7 @@
           <p class="card-text p-2 home-text">Onde tem coleta é uma iniciativa que visa facilitar o descarte correto de materiais que requerem tratamento especial: pilhas, baterias, óleo de cozinha, esponjas, medicamentos e outros.</p>
         </div>
       </div>
-      <%= link_to "INSERIR NOVO PONTO DE COLETA", new_collection_point_path , html_options = {class:"btn btn-success button-font text-white"} %>
+      <%= link_to "INSERIR NOVO PONTO DE COLETA", new_collection_point_path , html_options = {class:"btn btn-success button-font text-white insert-search-button"} %>
     </div>
     <%= form_tag collection_points_path, method: :get, class:"" do %>
       <div class="row justify-content-md-center">
@@ -15,7 +15,7 @@
       </div>
       <div class="row justify-content-md-center">
         <div class="col-6">
-          <%= button_to "BUSCAR PONTO DE COLETA", nil, class:"btn btn-success button-font text-white" %> 
+          <%= button_to "BUSCAR PONTO DE COLETA", nil, class:"btn btn-success insert-search-button button-font text-white" %> 
         </div>
       </div>
     <% end %>
