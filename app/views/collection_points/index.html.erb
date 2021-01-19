@@ -23,7 +23,7 @@
       <td class="table-content"><%= collection_point.address %></td>
       <td class="table-content"><%= collection_point.phone %></td>
       <td class="table-content"><%= collection_point.obs %></td>
-      <td class="table-content"><%= link_to 'R', collection_points_path, class:"btn btn-danger", data: { confirm: "Tem certeza que quer reportar #{collection_point.name}?" } %></td>
+      <td class="table-content"><%= link_to collection_points_path do %> <i class="fas fa-edit"></i><% end %> </td>
       <td class="table-content"><%= button_to 'A', collection_point, class:"btn btn-danger", method: :delete, data: { confirm: "Tem certeza que quer reportar #{collection_point.name}?" } %></td>
       </tr>
     <% end %>
