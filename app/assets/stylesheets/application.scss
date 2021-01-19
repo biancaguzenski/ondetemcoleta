@@ -1,3 +1,8 @@
+body, html, .card {
+    background-color: #efefef !important;
+}
+
+
 .title {
     font-family: 'Oswald', sans-serif;
     font-size: 21px !important;
@@ -37,6 +42,10 @@
 .insert-search-button {
     background-color: rgb(3, 16, 59) !important;
     border-color: rgb(3, 16, 59) !important;
+}
+
+.insert-search-button:hover {
+    font-size: 110%
 }
 
 .nav-footer-bg {

@@ -1,22 +1,22 @@
-<div class="card text-center pb-5">
-    <div class="card-body pt-3 pb-5">
-      <div class="row justify-content-md-center">
-        <div class="form-group col-8">
-          <p class="card-text p-2 home-text">Onde tem coleta é uma iniciativa que visa facilitar o descarte correto de materiais que requerem tratamento especial: pilhas, baterias, óleo de cozinha, esponjas, medicamentos e outros.</p>
-        </div>
+<div class="text-center pb-5">
+    <div class="row justify-content-md-center">
+      <div class="col-8">
+        <p class="p-2 home-text">Onde tem coleta é uma iniciativa que visa facilitar o descarte correto de materiais que requerem tratamento especial: pilhas, baterias, óleo de cozinha, esponjas, medicamentos e outros.</p>
       </div>
-      <%= link_to "INSERIR NOVO PONTO DE COLETA", new_collection_point_path , html_options = {class:"btn btn-success button-font text-white insert-search-button"} %>
     </div>
-    <%= form_tag collection_points_path, method: :get, class:"" do %>
-      <div class="row justify-content-md-center">
-        <div class="form-group col-6">
-          <%= text_field_tag "search", @name, placeholder: "Digite o nome da cidade, local ou sigla do estado", class:"form-control" %> 
-        </div>
+    <div class="row justify-content-md-center">
+      <div class="col-4">
+        <%= link_to "INSERIR NOVO PONTO DE COLETA", new_collection_point_path , html_options = {class:"btn btn-success button-font text-white insert-search-button"} %>
       </div>
-      <div class="row justify-content-md-center">
-        <div class="col-6">
-          <%= button_to "BUSCAR PONTO DE COLETA", nil, class:"btn btn-success insert-search-button button-font text-white" %> 
-        </div>
+      <div class="col-4">
+        <%= form_tag collection_points_path, method: :get, class:"" do %>
+            <div class="form-group col">
+              <%= text_field_tag "search", @name, placeholder: "Digite o nome do local ou a cidade", class:"form-control" %> 
+            </div>
+            <div class="form-group col">
+              <%= button_to "BUSCAR PONTO DE COLETA", nil, class:"btn btn-success insert-search-button button-font text-white" %> 
+            </div>
+        <% end %>
       </div>
-    <% end %>
+     </div>  
 </div>
