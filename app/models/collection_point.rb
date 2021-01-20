@@ -1,7 +1,9 @@
 class CollectionPoint < ApplicationRecord
 
     validates :name, :state, :city, :address, presence: true
-    validates :name, format: { with: /\A[[a-zA-Z-\s]+[:word:]]+\z/, message: "Nome: Apenas letras" }
+    validates :name, format: { with: /\A[\p{L}\p{M}\-]+\z/, message: "Nome: Apenas letras." }
+    validates :phone, numericality: { only_integer: true, message: "Telefone: Apenas números." }, 
+              :allow_blank => true, length: { in: 8..15, message: "Telefone: Insira telefone válido." }
     
     before_save :normalize_fields
 
