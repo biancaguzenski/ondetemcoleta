@@ -1,7 +1,8 @@
 class CollectionPoint < ApplicationRecord
 
     validates :name, :state, :city, :address, presence: true
-    validates :name, format: { with: /\A[[a-zA-Z-\s]+[:word:]]+\z/, message: "Nome: Apenas letras" }
+    validates :name, format: { with: /\A[\p{L}\p{M}\-]+\z/, message: "Nome: Apenas letras, espaços e traços." }
+    validates :phone, :allow_blank => true, length: { within: 3..15, message: "Telefone válido: Entre 3 e 15 caracteres." }
     
     before_save :normalize_fields
 
@@ -14,6 +15,6 @@ class CollectionPoint < ApplicationRecord
 
        self.address = Normalizer.new.normalize(self.address)
 
-       #self.phone = Normalizer.new.normalize_phone(self.phone)
+       self.phone = Normalizer.new.normalize_phone(self.phone)
     end
 end
