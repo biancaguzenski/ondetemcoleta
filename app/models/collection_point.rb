@@ -3,6 +3,7 @@ class CollectionPoint < ApplicationRecord
     validates :name, :state, :city, :address, presence: true
     
     validates :name, format: { with: /\A[\p{L}\p{M}\-\s]+\z/, 
+
                                      message: "Nome: Apenas letras, espaços e traços." }
 
     validates :city, format: { with: /\A[\p{L}\p{M}\-\s]+\z/, 
