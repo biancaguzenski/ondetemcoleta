@@ -3,13 +3,16 @@ class CollectionPoint < ApplicationRecord
     validates :name, :state, :city, :address, presence: true
     
     validates :name, format: { with: /\A[\p{L}\p{M}\-\s]+\z/, 
+<<<<<<< HEAD
                                      message: "Nome: Apenas letras, espaços e traços." },
                     
                                      length: { minimum: 2, message: "Nome: Mínimo de dois caracteres." }
+=======
+                                     message: "Nome: Apenas letras, espaços e traços." }
+>>>>>>> parent of b1acbaa... Changed validations for name and city size + tests.
 
     validates :city, format: { with: /\A[\p{L}\p{M}\-\s]+\z/, 
-                                     message: "Cidade: Apenas letras, espaços e traços." },
-                     length: { minimum: 3, message: "Cidade: Mínimo de três caracteres." }
+                                     message: "Cidade: Apenas letras, espaços e traços." }
 
     validates :address, format: { with: /\A[\p{L}\p{M}\-\s\,0-9]+\z/, 
                                         message: "Endereço: Apenas letras, espaços e vírgulas." }
