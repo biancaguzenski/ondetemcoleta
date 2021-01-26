@@ -4,7 +4,8 @@ class CollectionPoint < ApplicationRecord
     
     validates :name, format: { with: /\A[\p{L}\p{M}\-\s]+\z/, 
                                      message: "Nome: Apenas letras, espaços e traços." },
-                     length: { minimum: 2, message: "Nome: Mínimo de dois caracteres." }
+                    
+                                     length: { minimum: 2, message: "Nome: Mínimo de dois caracteres." }
 
     validates :city, format: { with: /\A[\p{L}\p{M}\-\s]+\z/, 
                                      message: "Cidade: Apenas letras, espaços e traços." },
