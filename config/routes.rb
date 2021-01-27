@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   get 'contact/new'
   root 'collection_points#home'
   get 'home', to: "collection_points#home"
+  get 'about', to: "collection_points#about"
+  get 'contact', to: "collection_points#contact"
 end

@@ -19,10 +19,15 @@ class CollectionPointsController < ApplicationController
   end
 
   def edit
-
   end
 
   def home
+  end
+
+  def about
+  end
+
+  def contact
   end
 
   def create
