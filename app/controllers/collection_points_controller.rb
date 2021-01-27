@@ -5,6 +5,12 @@ class CollectionPointsController < ApplicationController
     if params[:search]
       normalized_search = Normalizer.new.normalize(params[:search])
       @collection_points = CollectionPoint.where("name like ? OR city like ? OR state like ?", "%#{normalized_search}%", "%#{normalized_search}%", "%#{normalized_search}%")
+      if @collection_points.empty?
+        flash[:danger] = "Não há registros desse local/cidade ☹ Se descobrir um, nos ajude inserindo aqui! 😁"
+      else
+        @collection_points
+      end
+
     else
       @collection_points = CollectionPoint.all
       @collection_points = CollectionPoint.order(name: :desc)

@@ -46,7 +46,8 @@ body, html, .card {
 }
 
 .insert-search-button:hover {
-    font-size: 110%
+    background-color:#29967f !important;
+    border-color:#29967f !important;
 }
 
 .nav-footer-bg {
@@ -60,7 +61,7 @@ body, html, .card {
 .hr {
     margin:auto !important;
     width: 70%;
-    background-color: rgb(22, 172, 22);
+    background-color:#29967f;
 }
 .card-border {
     border: none !important;
@@ -72,6 +73,10 @@ body, html, .card {
     color: rgb(3, 16, 59);
 }
 
+.card-link:hover {
+    color:#29967f; 
+}
+
 .card-body {
     border:none !important;
 }
@@ -81,6 +86,10 @@ body, html, .card {
     padding: 0% !important;
     max-width: 30em;
     margin: auto !important;
+}
+
+.text-footer {
+    font-family: 'Montserrat';
 }
 
 @media only screen and (max-device-width: 900px) {
