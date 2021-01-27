@@ -1,5 +1,6 @@
 body, html, .card {
     background-color: #efefef !important;
+    size: 100%;
 }
 
 
@@ -33,12 +34,15 @@ body, html, .card {
     border-radius: 1em;
   }
 
-.logo-image img{
-    width: 50%;
-    height: 50%;
+.logo-image {
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
-
+.logo-image img {
+    width: 100%;
+    height: 100%;
+}
 .insert-search-button {
     background-color: rgb(3, 16, 59) !important;
     border-color: rgb(3, 16, 59) !important;
@@ -86,3 +90,7 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/solid';
 @import '@fortawesome/fontawesome-free/scss/regular';
 @import '@fortawesome/fontawesome-free/scss/v4-shims';
+
+/*
+*= require normalize-rails
+*/
