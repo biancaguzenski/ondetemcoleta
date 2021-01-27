@@ -60,22 +60,8 @@ body, html, .card {
     margin-left: 32%;
 }
 
-.icon-edit {
-    font-size: 20px;
-    color: green;
-    margin-top: 50%;
-}
-.icon-edit:hover {
-
-}
-
-.icon-report {
-    font-size: 20px;
-    color: tomato;
-    margin-top: 50%;
-}
-.icon-report:hover {
-
+card {
+    max-width: 100rem;
 }
 
 @media only screen and (max-device-width: 900px) {

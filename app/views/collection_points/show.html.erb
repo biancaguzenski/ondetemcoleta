@@ -1,32 +1,19 @@
-<p>
-  <strong>Name:</strong>
-  <%= @collection_point.name %>
-</p>
+<div class="card border-success text-center mb-4 mt-4">
+  <div class="card-header"><%= @collection_point.name %></div>
+  <div class="card-body">
+  <p>
+  <%= @collection_point.city %>, <%= @collection_point.state %>
+  </p>
+  <p>
+    <%= @collection_point.address %>
+  </p>
+  <p>
+    <%= @collection_point.phone %>
+  </p>
+  <p>
+    <%= @collection_point.obs %>
+  </p>
+  </div>
+</div>
 
-<p>
-  <strong>State:</strong>
-  <%= @collection_point.state %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @collection_point.city %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @collection_point.address %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @collection_point.phone %>
-</p>
-
-<p>
-  <strong>Obs:</strong>
-  <%= @collection_point.obs %>
-</p>
-
-<%= link_to 'Edit', edit_collection_point_path(@collection_point), class:"btn btn-secondary" %>
 <%= link_to 'Voltar', root_path, class:"btn btn-secondary" %>
