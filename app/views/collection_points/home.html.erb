@@ -1,19 +1,30 @@
 <div class="text-center">
-    <div class="row justify-content-md-center">
-      <div class="col pt-4">
-        <p class="home-text">Onde tem coleta é uma iniciativa que visa facilitar o descarte correto de materiais que requerem tratamento especial: pilhas, baterias, óleo de cozinha, esponjas, medicamentos e outros.</p>
-      </div>
-      <div class="col pt-4">
-        <%= link_to "INSERIR NOVO PONTO DE COLETA", new_collection_point_path , html_options = {class:"btn btn-success button-font text-white insert-search-button"} %>
-
-        <%= form_tag collection_points_path, method: :get, class:"" do %>
-            <div class="form-group col pt-4">
-              <%= text_field_tag "search", @name, placeholder: "Digite o nome do local ou a cidade", class:"form-control" %> 
-            </div>
-            <div class="form-group col pt-1">
-              <%= button_to "BUSCAR PONTO DE COLETA", nil, class:"btn btn-success insert-search-button button-font text-white" %> 
-            </div>
-        <% end %>
-        </div>
+  <div class="row justify-content-md-center">
+    <div class="col col-sm-12 col-12 pt-4">
+      <p class="home-text">Onde tem coleta é uma iniciativa que visa facilitar o descarte correto de materiais que requerem tratamento especial: pilhas, baterias, óleo de cozinha, esponjas, medicamentos e outros.</p>
     </div>
+  </div>
+    <div class="col pt-4">
+      <%= link_to "INSERIR NOVO PONTO DE COLETA", new_collection_point_path , html_options = {class:"btn btn-success button-font text-white insert-search-button"} %>
+      <p class="pt-3">
+          <a class="btn btn-primary insert-search-button button-font text-white" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">BUSCAR PONTO DE COLETA</a>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body mt-0">
+              <%= form_tag collection_points_path, method: :get, class:"" do %>
+                <div class="form-group col pt-1 m-auto">
+                    <%= text_field_tag "search", @name, placeholder: "Digite o nome do local ou a cidade", class:"form-control" %> 
+                </div>
+                <div class="form-group col pt-3">
+                  <%= button_to "BUSCAR", nil, class:"btn btn-success insert-search-button button-font text-white" %> 
+                </div>
+                <% end %>
+            </div>
+          </div>
+         </div>
+      </div>
+    </div>
+  </div>
 </div>

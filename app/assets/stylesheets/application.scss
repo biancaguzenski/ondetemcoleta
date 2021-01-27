@@ -69,6 +69,13 @@ body, html, .card {
     color: rgb(3, 16, 59);
 }
 
+.card-body {
+    border:none !important;
+    padding: 0% !important;
+    max-width: 30em;
+    margin: auto !important;
+}
+
 @media only screen and (max-device-width: 900px) {
     .logo-image img {
         width: 90%;
