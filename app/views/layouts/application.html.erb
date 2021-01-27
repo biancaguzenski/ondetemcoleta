@@ -15,55 +15,29 @@
   </head>
 
   <body>
-    <header>
-      <div class="container mt-3 pt-3 pb-2">
-        <nav class="navbar navbar-expand-lg navbar-light nav-footer-bg p-0">
-          <div class="container">
-                <a class="navbar-brand p-0" href="/">
-                  <div class="logo-image">
-                    <%= image_tag ("3.png") %>
-                  </div>
-                </a>
-          </div>
-        </nav>
-        <div class="pb-3">
-          <div class="text-center pb-1 nav-footer-bg">
-            <button type="button" class="text-navbar" data-toggle="modal" data-target="#exampleModal">
-              fale conosco
-            </button>|
-            <a class="text-navbar mr-3" href="/">sobre o projeto</a>
-          </div>
+    <div class="container mt-3">
+      <nav class="navbar navbar-expand-lg navbar-light nav-footer-bg p-0">
+        <div class="container">
+              <a class="navbar-brand p-0" href="/">
+                <div class="logo-image">
+                  <%= image_tag ("3.png") %>
+                </div>
+              </a>
         </div>
-        <%= yield %>
+      </nav>
+      <div class="text-navbar">
+        <div class="text-center pb-1 nav-footer-bg">
+          <a class="text-navbar mr-3" href="/">sobre o projeto</a>|
+          <a class="text-navbar ml-3" href="/">fale conosco</a>
+        </div>
       </div>
-    </header>
-    <footer class="pt-3 pb-4">
+      <%= yield %>
+    </div>
+    <footer class="pt-4 pb-4">
       <div class="container home-text">
         <div class="text-center p-3 nav-footer-bg">
           © 2020 Copyright
           <a class="text-dark" href="">ondetemcoleta</a>
-        </div>
-      </div>
-
-      <!-- Modal -->
-
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              COLOCAR FORMULÁRIO
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary">Enviar</button>
-            </div>
-          </div>
         </div>
       </div>
     </footer>
