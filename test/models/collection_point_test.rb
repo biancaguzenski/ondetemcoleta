@@ -62,4 +62,14 @@ class CollectionPointTest < ActiveSupport::TestCase
     local.phone = "12"
     assert_not local.save, "Tried to save local with invalid phone size"
   end
+  test "should not create new local with invalid name size - smaller" do
+    local = CollectionPoint.new
+    local.name = "A"
+    assert_not local.save, "Tried to save local with invalid name size"
+  end
+  test "should not create new local with invalid city size - smaller" do
+    local = CollectionPoint.new
+    local.name = "AE"
+    assert_not local.save, "Tried to save local with invalid city size"
+  end
 end
