@@ -19,12 +19,6 @@ body, html, .card {
     font-size: 1.3em;
 }
 
-.text-navbar {
-    font-family: 'Lato', sans-serif;
-    font-size: 1em;
-    color: rgb(3, 16, 59);
-}
-
 .subtitles {
     font-family: 'Lato', cursive;
     font-size: 1em;
@@ -40,8 +34,8 @@ body, html, .card {
     overflow: hidden;
 }
 .logo-image img {
-    width: 100%;
-    height: 100%;
+    width: 40%;
+    height: 40%;
 }
 .insert-search-button {
     background-color: rgb(3, 16, 59) !important;
@@ -56,16 +50,30 @@ body, html, .card {
     background-color: #efefef;
 }
 
-.navbar-brand {
-    margin-left: 32%;
-}
-
-card {
+.card {
     max-width: 100rem;
 }
 
+.hr {
+    margin:auto !important;
+    width: 70%;
+    background-color: rgb(22, 172, 22);
+}
+.card-border {
+    border: none !important;
+}
+
+.card-link {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    color: rgb(3, 16, 59);
+}
+
 @media only screen and (max-device-width: 900px) {
-    /* .menu { width:100%; } */
+    .logo-image img {
+        width: 90%;
+        height: 90%;
+    }
 }
 
 @import "bootstrap/scss/bootstrap";

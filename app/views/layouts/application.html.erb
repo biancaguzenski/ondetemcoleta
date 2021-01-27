@@ -15,28 +15,19 @@
   </head>
 
   <body>
-    <div class="container-md container-fluid m-auto">
-      <header>
-        <nav class="navbar navbar-expand-lg navbar-light nav-footer-bg p-0">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col col-6 align-self-center">
-                <a class="" href="/">
-                  <div class="logo-image">
-                    <%= image_tag ("3.png") %>
-                  </div>
-                </a>
-              </div>
-            </div>
-            </div>
-        </nav>
-        <div class="text-navbar">
-          <div class="text-center pb-1 nav-footer-bg">
-            <a class="text-navbar" href="/">sobre o projeto </a>|
-            <a class="text-navbar" href="/">fale conosco</a>
-          </div>
+    <header>
+      <div class="card card-border logo-image text-center mt-4">
+        <div class="card-body p-0 mb-0">
+          <%= image_tag ("3.png") %>
         </div>
-      </header>
+        <hr class="hr pt-0 mt-0">
+        <div class="card-body pt-3">
+          <a href="#" class="card-link">sobre o projeto</a>
+          <a href="#" class="card-link">fale conosco</a>
+        </div>
+      </div>
+    </header>
+    <div class="container-md container-fluid m-auto">
       <main>
         <%= yield %>
       </main>
