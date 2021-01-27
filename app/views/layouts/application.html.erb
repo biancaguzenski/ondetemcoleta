@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= content_for?(:title) ? yield(:title) : "Onde tem coleta?" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "oOnde tem coleta?" %>">
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Onde tem coleta?" %>">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Lato&family=Montserrat&family=Oswald&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <%= csrf_meta_tags %>
@@ -16,22 +16,26 @@
 
   <body>
     <div class="container mt-3">
-      <nav class="navbar navbar-expand-lg navbar-light nav-footer-bg p-0">
-        <div class="container">
-              <a class="navbar-brand p-0" href="/">
-                <div class="logo-image">
-                  <%= image_tag ("3.png") %>
-                </div>
-              </a>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light nav-footer-bg p-0">
+          <div class="container">
+                <a class="navbar-brand p-0" href="/">
+                  <div class="logo-image">
+                    <%= image_tag ("3.png") %>
+                  </div>
+                </a>
+          </div>
+        </nav>
+        <div class="text-navbar">
+          <div class="text-center pb-1 nav-footer-bg">
+            <a class="text-navbar mr-3" href="/">sobre o projeto</a>|
+            <a class="text-navbar ml-3" href="/">fale conosco</a>
+          </div>
         </div>
-      </nav>
-      <div class="text-navbar">
-        <div class="text-center pb-1 nav-footer-bg">
-          <a class="text-navbar mr-3" href="/">sobre o projeto</a>|
-          <a class="text-navbar ml-3" href="/">fale conosco</a>
-        </div>
-      </div>
-      <%= yield %>
+      </header>
+      <main>
+        <%= yield %>
+      </main>
     </div>
     <footer class="pt-4 pb-4">
       <div class="container home-text">
