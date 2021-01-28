@@ -1,12 +1,23 @@
 <h1 align="center">
   <img alt="ondetemcoleta" title="#ondetemcoleta" src="app/assets/images/1.svg" />
 </h1>
-<h2 align="center"> Onde tem coleta? </h2>
+<h2 align="center"><a href="ondetemcoleta.herokuapp.com/"> Onde tem coleta? </a></h2>
+<h5 align="center">uma plataforma para facilitar o descarte correto de lixo</h5>
 <h3 align="center"> Status do Projeto: Em desenvolvimento :warning: </h3>
+
+<p align="center">
+ <a href="#sobre">Sobre</a> •
+ <a href="#o-que-a-plataforma-faz">O que a plataforma faz</a> • 
+ <a href="#tecnologias">Tecnologias</a> • 
+ <a href="#serviços-usados">Serviços usados</a> • 
+ <a href="#como-usar">Como usar</a> • 
+ <a href="#licença">Licença</a> • 
+ <a href="#autora">Autora</a>
+</p>
 
 ## Sobre
 
-Ondetemcoleta? é uma plataforma criada para disponibilizar pra comunidade um banco de pontos de coleta de lixo especial. Lixos especiais, como pilhas, eletrônicos e óleo de cozinha não devem ser descartados em lixo comum, pois contem compostos que degradam o meio ambiente .........
+Ondetemcoleta? é uma plataforma criada para disponibilizar a comunidade um banco de pontos de coleta de lixo especial. O lixo especial é todo material que, por conta de suas características físicas e químicas, não pode ser descartado junto com o lixo comum ou reciclável, como pilhas, baterias, vidro quebrado e óleo de cozinha. Esses resíduos precisam receber tratamento diferenciado para que seu descarte não prejudique drasticamente o meio ambiente.
 
 ## O que a plataforma faz
 
@@ -14,19 +25,20 @@ Ondetemcoleta? é uma plataforma criada para disponibilizar pra comunidade um ba
 - Inserção de locais de coleta de lixo especial.
 
 ## Tecnologias
-* Ruby 2.7.2
-* Rails 6.0.3
-* PostgreSQL 11.10
+
+* [Ruby 2.7.2](https://www.ruby-lang.org/)
+* [Rails 6.0.3](https://rubyonrails.org/)
+* [PostgreSQL 11.10](https://www.postgresql.org/)
 
 ## Serviços usados
 
-* Github
-* Heroku
+* [Github](https://github.com/)
+* [Heroku](https://heroku.com/)
 
 ## Como usar
 
 ```ruby
-# Clone o projeto
+# Clone o projeto e acesse a pasta
 
 git clone https://github.com/biancaguzenski/ondetemcoleta.git
 
@@ -57,12 +69,14 @@ rails s
 ```
 
 
-#### Licença
+## Licença
 
 Este projeto esta sobe a licença MIT.
 
-#### Autora
+## Autora
 
 Feito com :heart:! Entre em contato!
 [<img src="https://avatars.githubusercontent.com/u/64049698?s=460&v=4" width=115 > <br> <sub> Bianca Guzenski </sub>](https://github.com/biancaguzenski) |
 | :---: |  
+[![Linkedin Badge](https://img.shields.io/badge/-Bianca-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/biancaguzenski/)](https://www.linkedin.com/in/biancaguzenski/) 
+[![Gmail Badge](https://img.shields.io/badge/-biancalway@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:biancalway@gmail.com)](mailto:biancalway@gmail.com)
