@@ -1,7 +1,7 @@
 <h1 align="center">
   <img alt="ondetemcoleta" title="#ondetemcoleta" src="app/assets/images/1.svg" />
 </h1>
-<h2 align="center"><a href="ondetemcoleta.herokuapp.com/"> Onde tem coleta? </a></h2>
+<h2 align="center"><a href="https://ondetemcoleta.herokuapp.com/"> Onde tem coleta? </a></h2>
 <h5 align="center">uma plataforma para facilitar o descarte correto de lixo</h5>
 <h3 align="center"> Status do Projeto: Em desenvolvimento :warning: </h3>
 
@@ -17,7 +17,7 @@
 
 ## Sobre
 
-Ondetemcoleta? é uma plataforma criada para disponibilizar a comunidade um banco de pontos de coleta de lixo especial. O lixo especial é todo material que, por conta de suas características físicas e químicas, não pode ser descartado junto com o lixo comum ou reciclável, como pilhas, baterias, vidro quebrado e óleo de cozinha. Esses resíduos precisam receber tratamento diferenciado para que seu descarte não prejudique drasticamente o meio ambiente.
+Ondetemcoleta? é uma plataforma criada para disponibilizar a comunidade um banco de pontos de coleta de lixo especial. O lixo especial é todo material que, por conta de suas características físicas e químicas, não pode ser descartado junto com o lixo comum ou reciclável (como pilhas, baterias, vidro quebrado e óleo de cozinha). Esses resíduos precisam receber tratamento diferenciado para que seu descarte não prejudique drasticamente o meio ambiente.
 
 ## O que a plataforma faz
 
@@ -71,7 +71,7 @@ rails s
 
 ## Licença
 
-Este projeto esta sobe a licença MIT.
+Este projeto usa a licença MIT.
 
 ## Autora
 
