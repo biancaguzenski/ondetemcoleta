@@ -1,36 +1,38 @@
-<% if flash[:notice] %>
-  <div class="notice alert alert-success" role="alert""><%= flash[:notice] %></div>
-<% end %>
-<% if flash[:danger] %>
-  <div class="notice alert alert-danger" role="alert""><%= flash[:danger] %></div>
-<% end %>
+<div class="container-md container-fluid m-auto">
+  <% if flash[:notice] %>
+    <div class="notice alert alert-success" role="alert""><%= flash[:notice] %></div>
+  <% end %>
+  <% if flash[:danger] %>
+    <div class="notice alert alert-danger" role="alert""><%= flash[:danger] %></div>
+  <% end %>
 
-<table class="table table-bordered table-hover table-striped table-responsive table-show" >
-  <thead class="table-secondary table-head">
-    <tr>
-      <th class="table-content" scope="col">LOCAL</th>
-      <th class="table-content" scope="col">ESTADO</th>
-      <th class="table-content" scope="col">CIDADE</th>
-      <th class="table-content" scope="col">ENDEREÇO</th>
-      <th class="table-content" scope="col">TELEFONE</th>
-      <th class="table-content" scope="col">OBSERVAÇÃO</th>
-      <th class="table-content" scope="col">TIPO DE MATERIAL</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @collection_points.each do |collection_point| %>
+  <table class="table table-bordered table-hover table-striped table-responsive table-show" >
+    <thead class="table-secondary table-head">
       <tr>
-      <td class="table-content"><%= link_to "#{collection_point.name}", collection_point%></td>
-      <td class="table-content"><%= collection_point.state %></td>
-      <td class="table-content"><%= collection_point.city %></td>
-      <td class="table-content"><%= collection_point.address %></td>
-      <td class="table-content"><%= collection_point.phone %></td>
-      <td class="table-content"><%= collection_point.obs %></td>
-      <td class="table-content"><%= collection_point.material_type %></td>
+        <th class="table-content" scope="col">LOCAL</th>
+        <th class="table-content" scope="col">ESTADO</th>
+        <th class="table-content" scope="col">CIDADE</th>
+        <th class="table-content" scope="col">ENDEREÇO</th>
+        <th class="table-content" scope="col">TELEFONE</th>
+        <th class="table-content" scope="col">OBSERVAÇÃO</th>
+        <th class="table-content" scope="col">TIPO DE MATERIAL</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<%= link_to 'Novo local', new_collection_point_path, class:"btn btn-secondary" %>
-<%= link_to 'Voltar', root_path, class:"btn btn-secondary" %>
+    </thead>
+    <tbody>
+      <% @collection_points.each do |collection_point| %>
+        <tr>
+        <td class="table-content"><%= link_to "#{collection_point.name}", collection_point%></td>
+        <td class="table-content"><%= collection_point.state %></td>
+        <td class="table-content"><%= collection_point.city %></td>
+        <td class="table-content"><%= collection_point.address %></td>
+        <td class="table-content"><%= collection_point.phone %></td>
+        <td class="table-content"><%= collection_point.obs %></td>
+        <td class="table-content"><%= collection_point.material_type %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'Novo local', new_collection_point_path, class:"btn btn-secondary" %>
+  <%= link_to 'Voltar', root_path, class:"btn btn-secondary" %>
+</div>

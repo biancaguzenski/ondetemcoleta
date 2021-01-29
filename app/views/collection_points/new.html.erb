@@ -1,15 +1,16 @@
-
-<div class="container title"><h2>Inserir novo local</h2>
-<h4 class="subtitles pb-4 pt-3"> * requerido </h4>
-</div>
-<% if @collection_point.errors.any? %>
-  <div class="alert alert-danger" role="alert">
-    <ul class="pt-3">
-      <% @collection_point.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
+<div class="container-md container-fluid m-auto">
+  <div class="container title"><h2>Inserir novo local</h2>
+  <h4 class="subtitles pb-4 pt-3"> * requerido </h4>
   </div>
-<% end %>
+  <% if @collection_point.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <ul class="pt-3">
+        <% @collection_point.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<%= render 'form', collection_points: @collection_point, redirect_to: root_path %>
+  <%= render 'form', collection_points: @collection_point, redirect_to: root_path %>
+</div>
