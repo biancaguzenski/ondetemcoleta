@@ -102,6 +102,20 @@ body, html, .card {
     height: 50%; 
 }
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-about {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 1.2em;
+    color: rgb(3, 16, 59);
+}
+
 @media only screen and (max-device-width: 900px) {
     .logo-image img {
         width: 90%;
