@@ -19,6 +19,7 @@ class CollectionPoint < ApplicationRecord
                                 message: "Telefone: Apenas números." }
     
     before_save :normalize_fields
+    belongs_to :material_type, optional: true
 
     def normalize_fields
        self.name = Normalizer.new.normalize(self.name)

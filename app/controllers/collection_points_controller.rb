@@ -77,6 +77,6 @@ class CollectionPointsController < ApplicationController
     end
 
     def collection_point_params
-      params.require(:collection_point).permit(:name, :state, :city, :address, :phone, :obs, :type_of_material)
+      params.require(:collection_point).permit(:name, :state, :city, :address, :phone, :obs, :material_type_id )
     end
 end

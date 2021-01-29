@@ -28,7 +28,7 @@
 
     <div class="form-group col-md-6">
       <%= form.label :type_of_material, '* Tipo de material', class:"col control-label" %>
-      <%= form.text_field :type_of_material, placeholder: "Ex: Pilhas e baterias", class:"form-control" %>
+      <%= form.collection_select :material_type_id, MaterialType.all, :id, :name, {}, class:"form-control" %>
     </div>
     
     <div class="actions ml-4">

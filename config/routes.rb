@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :material_types
   resources :collection_points
   get 'contact/new'
   root 'collection_points#home'
