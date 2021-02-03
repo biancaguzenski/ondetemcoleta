@@ -15,12 +15,14 @@ gem 'pg'
 gem 'font_awesome5_rails'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'normalize-rails'
+gem 'rails-controller-testing'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'ffaker'
   gem 'factory_bot_rails'
+  gem 'database_cleaner-active_record'
 end
 
 group :development do
