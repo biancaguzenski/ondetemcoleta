@@ -25,25 +25,4 @@ RSpec.describe CollectionPointsController, type: :controller do
             expect(assigns(@collection_points)).to_not be_empty
         end
     end
-
-    #context "GET #show" do
-    #    let(:collection_points) { create(:collection_points) }
-    #    it "should success and render show page" do
-    #        get :show, params: { id: collection_points.id }
-    #        expect(response).to have_http_status(200)
-    #        expect(response).to render_template(:show)
-    #    end
-    #end
-
-    #context "GET #new" do
-    #    it "should succeed and render new page" do
-    #        get :new
-    #        expect(response).to have_http_status(200)
-    #        expect(response).to render_template(:new)
-    #    end
-    #    it "should create new collection point" do
-    #        expect(assigns(:post)).to be_a(CollectionPoint)
-    #        expect(assigns(:post)).to be_a_new(CollectionPoint)
-    #    end
-    #end
 end

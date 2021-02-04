@@ -11,7 +11,7 @@ class CollectionPointsController < ApplicationController
         @collection_points
       end
 
-    else
+    else 
       @collection_points = CollectionPoint.all
       @collection_points = CollectionPoint.order(name: :desc)
     end
@@ -75,7 +75,6 @@ class CollectionPointsController < ApplicationController
     def set_collection_point
       @collection_point = CollectionPoint.find(params[:id])
     end
-
     def collection_point_params
       params.require(:collection_point).permit(:name, :state, :city, :address, :phone, :obs, :material_type_id )
     end
