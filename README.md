@@ -3,7 +3,6 @@
 </h1>
 <h2 align="center"><a href="https://ondetemcoleta.herokuapp.com/"> Onde tem coleta? </a></h2>
 <h5 align="center">uma plataforma para facilitar o descarte correto de lixo</h5>
-<h3 align="center"> Status do Projeto: Em desenvolvimento :warning: </h3>
 
 <p align="center">
  <a href="#sobre">Sobre</a> •
